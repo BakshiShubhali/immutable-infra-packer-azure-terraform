@@ -1,0 +1,14 @@
+*.pkrvars.json         # Keeps your Azure credentials private
+*.log                        # Ignores all log files
+secrets.pkrvars.json 
+
+# Local .terraform directories
+.terraform/
+
+# State files
+*.tfstate
+*.tfstate.backup
+
+# Terraform dependency lock file
+.terraform.lock.hcl
+
