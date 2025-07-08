@@ -24,11 +24,10 @@ immutable-infra-packer-azure-terraform/
 
 Before using Packer or Terraform, authenticate into Azure using a Service Principal with the following command:
 
-bash-----
 az login --service-principal \
   -u "<client_id>" \
   -p "<client_secret>" \
-  --tenant "<tenant_id>" 
+  --tenant "<tenant_id>"
 
 🔒 Replace:
 
@@ -46,22 +45,16 @@ SSH keys are required to log in to the VM created by Terraform.
 
 Generate a secure SSH key pair:
 
-bash
-Copy
-Edit
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+
 Press Enter to accept the default file path (~/.ssh/id_rsa), and optionally set a passphrase.
 
 Then, copy the public key (id_rsa.pub) into your main.tf file under admin_ssh_key block:
 
-hcl
-Copy
-Edit
 admin_ssh_key {
   username   = "azureuser"
   public_key = file("~/.ssh/id_rsa.pub")
 }
-
 
 # Step 3 : Build Image with Packer
 
