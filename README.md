@@ -86,5 +86,5 @@ terraform output
 
 Verify Nginx is running using -
 
-curl http://<public-ip>
+curl http://<your-public-ip>
 
