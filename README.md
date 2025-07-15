@@ -11,6 +11,7 @@ This project automates the creation of an Nginx-enabled VM image using Packer, t
 
 ## 📁 Folder Structure
 
+```
 immutable-infra-packer-azure-terraform/
 ├── main.tf                 # Terraform script (creates RG, VNet, NSG, NIC, VM, Public IP)
 ├── ubuntu-nginx.json       # Packer template to build custom image with Nginx
@@ -18,6 +19,7 @@ immutable-infra-packer-azure-terraform/
 ├── .gitignore              # Ignores secrets.pkrvars.json and Terraform state files
 ├── README.md               # Project documentation
 └── terraform.tfstate*      # Terraform state files (auto-generated)
+```
 
 
 # Step 1: Authenticate to Azure (Service Principal)
