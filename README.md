@@ -53,10 +53,12 @@ Press Enter to accept the default file path (~/.ssh/id_rsa), and optionally set 
 
 Then, copy the public key (id_rsa.pub) into your main.tf file under admin_ssh_key block:
 
+```
 admin_ssh_key {
   username   = "azureuser"
   public_key = file("~/.ssh/id_rsa.pub")
 }
+```
 
 # Step 3 : Build Image with Packer
 
