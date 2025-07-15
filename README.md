@@ -24,10 +24,12 @@ immutable-infra-packer-azure-terraform/
 
 Before using Packer or Terraform, authenticate into Azure using a Service Principal with the following command:
 
+```
 az login --service-principal \
   -u "<client_id>" \
   -p "<client_secret>" \
   --tenant "<tenant_id>"
+```
 
 🔒 Replace:
 
