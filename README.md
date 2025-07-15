@@ -7,7 +7,6 @@ This project automates the creation of an Nginx-enabled VM image using Packer, t
 - [Packer](https://developer.hashicorp.com/packer)
 - [Terraform](https://developer.hashicorp.com/terraform)
 
----
 
 ## 📁 Folder Structure
 
