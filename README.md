@@ -47,7 +47,9 @@ SSH keys are required to log in to the VM created by Terraform.
 
 Generate a secure SSH key pair:
 
+```
 ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 
 Press Enter to accept the default file path (~/.ssh/id_rsa), and optionally set a passphrase.
 
@@ -64,11 +66,15 @@ admin_ssh_key {
 
 If using variable file(secrets.pkrvars.json):
 
+```
     packer build -var-file=secrets.pkrvars.json ubuntu-nginx.json
+```
 
 Otherwise:
 
+```
     packer build ubuntu-nginx.json
+```
 
 # Step 4 : Verify the Image
 
@@ -76,19 +82,26 @@ Navigate to Azure Portal → Resource Group → Image
 
 # Step 5 : Deploy Resources with Terraform
 
+
+```
 terraform init
 terraform plan
 terraform apply
 Access the VM
+```
 
 After deployment:
 
 🔍 Get the public IP:
+```
 terraform output
+```
 
 # Step 6 : Use the public IP from Terraform output
 
 Verify Nginx is running using -
 
+```
 curl http://<your-public-ip>
+```
 
